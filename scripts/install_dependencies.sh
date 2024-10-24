@@ -51,11 +51,11 @@ fi
 # docker run -d --name aura-app --hostname localhost -e "AWS_ACCESS_KEY_ID=AKIAT567PXHK6WVKNEOS3" -e "AWS_SECRET_ACCESS_KEY=9yZfLNgfLmMtIc+uERbDFw+jygll+MtjuX8rqWZKl" -e "OTP_API_KEY=5d7dbdd8-6498-11ef-8b60-0200cd936042" -p 80:80 -d 270514764245.dkr.ecr.us-east-1.amazonaws.com/static-website:latest
 #docker run -d --name aura-db --hostname localhost -e "AWS_ACCESS_KEY_ID=AKIAT567PXHK6WVKNEOS3" -e "AWS_SECRET_ACCESS_KEY=9yZfLNgfLmMtIc+uERbDFw+jygll+MtjuX8rqWZKl" -e "OTP_API_KEY=5d7dbdd8-6498-11ef-8b60-0200cd936042" -p 5432:5432 -d 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-hrms-db:latest
 
-docker run -d \
-  --name aura-db \
-  --network aura-network \
-  --env POSTGRES_USER=postgres \
-  --env POSTGRES_PASSWORD=password \
-  --env POSTGRES_DB=hrms \
-  --publish published=5432,target=5432 \
-  270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest
+# docker run -d \
+#   --name aura-db \
+#   --network aura-network \
+#   --env POSTGRES_USER=postgres \
+#   --env POSTGRES_PASSWORD=password \
+#   --env POSTGRES_DB=hrms \
+#   --publish published=5432,target=5432 \
+#   270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest
