@@ -28,4 +28,4 @@ sudo rm -rf /home/ubuntu/aura-db || true
 
 sudo docker rm -f 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest || true 
 
-docker pull 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest
+docker pull 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:$IMAGE_TAG
