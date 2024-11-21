@@ -22,10 +22,10 @@ sudo systemctl start docker
 
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 270514764245.dkr.ecr.us-east-1.amazonaws.com
 
-IMAGE_TAG=$(aws ssm get-parameter --name "database-image-tag" --region ap-south-1 --query "Parameter.Value" --output text)
+# IMAGE_TAG=$(aws ssm get-parameter --name "database-image-tag" --region ap-south-1 --query "Parameter.Value" --output text)
 
 sudo rm -rf /home/ubuntu/aura-db || true
 
 sudo docker rm -f 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest || true 
 
-docker pull 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:$IMAGE_TAG
+docker pull 270514764245.dkr.ecr.us-east-1.amazonaws.com/aura-postgres:latest
